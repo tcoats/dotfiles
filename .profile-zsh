@@ -1,0 +1,18 @@
+source ~/.nvm/nvm.sh
+source ~/.profile-metocean
+
+export DOCKER_TLS_VERIFY=1
+export DOCKER_HOST=tcp://192.168.59.103:2376
+export DOCKER_CERT_PATH=/Users/tcoats/.boot2docker/certs/boot2docker-vm
+
+alias fuck='$(thefuck $(fc -ln -1))'
+alias msg="growlnotify -n 'Message' -m ''"
+alias flush="sudo killall -HUP mDNSResponder && msg 'DNS Cache Flushed'"
+alias edit="subl /etc/hosts"
+alias redocker="boot2docker down && boot2docker up && boot2docker ssh 'sudo /etc/init.d/docker restart'"
+
+export CONSUL_HOST="http://192.168.59.103:8500"
+export COCOS_CONSOLE_ROOT=/Users/tcoats/Open/cocos2d-js-v3.3/tools/cocos2d-console/bin
+export PATH=$COCOS_CONSOLE_ROOT:$PATH
+
+nvm use iojs > /dev/null
