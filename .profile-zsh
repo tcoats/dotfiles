@@ -1,4 +1,5 @@
-source ~/.nvm/nvm.sh
+export NVM_DIR="/home/tcoats/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
 source ~/.profile-metocean
 eval "$(docker-machine env dev)"
 
