@@ -12,4 +12,25 @@ else
   export EDITOR='subl -w'
 fi
 
-source ~/.profile-zsh
+command_exists () {
+  type "$1" &> /dev/null ;
+}
+
+source ~/.nvm/nvm.sh
+
+if [ -f ~/.profile-metocean ]; then
+  source ~/.profile-metocean
+fi
+
+if [ -f ~/.profile-osx ]; then
+  source ~/.profile-osx
+fi
+
+if command_exists docker-machine; then
+  eval "$(docker-machine env dev)"
+fi
+
+if command_exists keychain; then
+  eval `keychain --eval assetaltitude_rsa`
+fi
+
