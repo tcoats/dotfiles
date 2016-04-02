@@ -26,6 +26,10 @@ if [ -f ~/.profile-osx ]; then
   source ~/.profile-osx
 fi
 
+if [ -f ~/.profile-ubuntu ]; then
+  source ~/.profile-ubuntu
+fi
+
 if command_exists docker-machine; then
   eval "$(docker-machine env dev)"
 fi
