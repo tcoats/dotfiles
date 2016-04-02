@@ -8,6 +8,10 @@ if command_exists docker-machine; then
   eval "$(docker-machine env dev)"
 fi
 
+if command_exists keychain; then
+  eval `keychain --eval assetaltitude_rsa`
+fi
+
 alias fuck='$(thefuck $(fc -ln -1))'
 alias msg="growlnotify -n 'Message' -m ''"
 alias flush="sudo killall -HUP mDNSResponder && msg 'DNS Cache Flushed'"
