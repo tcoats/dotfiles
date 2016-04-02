@@ -1,6 +1,12 @@
+command_exists () {
+  type "$1" &> /dev/null ;
+}
+
 source ~/.nvm/nvm.sh
 source ~/.profile-metocean
-eval "$(docker-machine env dev)"
+if command_exists docker-machine; then
+  eval "$(docker-machine env dev)"
+fi
 
 alias fuck='$(thefuck $(fc -ln -1))'
 alias msg="growlnotify -n 'Message' -m ''"
