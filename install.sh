@@ -7,3 +7,5 @@ touch ~/.profile-metocean
 chmod +x ~/.profile-metocean
 touch ~/.profile-osx
 chmod +x ~/.profile-osx
+touch ~/.profile-ubuntu
+chmod +x ~/.profile-ubuntu
