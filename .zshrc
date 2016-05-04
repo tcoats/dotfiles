@@ -31,7 +31,9 @@ if [ -f ~/.profile-ubuntu ]; then
 fi
 
 if command_exists docker-machine; then
-  eval "$(docker-machine env dev)"
+  if [ $(docker-machine status dev) == 'Running' ]; then
+    eval "$(docker-machine env dev)"
+  fi
 fi
 
 if command_exists keychain; then
