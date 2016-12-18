@@ -33,6 +33,7 @@ bdone = "!f() { git checkout ${1-master} && git up && git bclean ${1-master}; };
     cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
 [diff]
     tool = Kaleidoscope
+	compationHeuristic = true
 [difftool]
     prompt = false
 [mergetool "Kaleidoscope"]

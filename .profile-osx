@@ -1,5 +1,5 @@
 alias msg="growlnotify -n 'Message' -m ''"
-alias flush="sudo killall -HUP mDNSResponder && msg 'DNS Cache Flushed'"
+alias flush="sudo dscacheutil -flushcache && msg 'DNS Cache Flushed'"
 alias edit="subl /etc/hosts"
 alias nuke='docker stop $(docker ps -a -q) && docker rm $(docker ps -a -q)'
 alias fuck='$(thefuck $(fc -ln -1))'
