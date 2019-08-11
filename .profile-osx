@@ -7,4 +7,4 @@ alias fuck='$(thefuck $(fc -ln -1))'
 export TUGBOAT_PATH=./:/Users/tcoats/MetOcean/webstack:/Users/tcoats/.tugboat:/Users/tcoats/Mayhem/assetaltitude/devops
 export CONSUL_HOST="http://192.168.59.103:8500"
 export COCOS_CONSOLE_ROOT=/Users/tcoats/Open/cocos2d-js-v3.3/tools/cocos2d-console/bin
-export PATH=$COCOS_CONSOLE_ROOT:$PATH
+export PATH=$COCOS_CONSOLE_ROOT:/opt/etcher-cli:$PATH

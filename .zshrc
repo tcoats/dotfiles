@@ -9,14 +9,14 @@ export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/Users
 if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='nano'
 else
-  export EDITOR='subl -w'
+  export EDITOR='/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl -w'
 fi
 
 command_exists () {
   type "$1" &> /dev/null ;
 }
 
-source ~/.nvm/nvm.sh
+#source ~/.nvm/nvm.sh
 
 if [ -f ~/.profile-metocean ]; then
   source ~/.profile-metocean
@@ -28,12 +28,6 @@ fi
 
 if [ -f ~/.profile-ubuntu ]; then
   source ~/.profile-ubuntu
-fi
-
-if command_exists docker-machine; then
-  if [ $(docker-machine status dev) == 'Running' ]; then
-    eval "$(docker-machine env dev)"
-  fi
 fi
 
 if command_exists keychain; then
